@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Year Greeting</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans';
+            text-align: justify;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            font-weight: 700; /* Bold weight */
+        }
+        p {
+            font-size: 1.2em;
+            font-weight: 400; /* Regular weight */
+        }
+        figure {
+            display: inline-block;
+            text-align: justify;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        figcaption {
+            font-size: 1em;
+            color: #555;
+            font-weight: 500; /* Medium weight */
+            margin-top: 10px;
+        }
+        .signature {
+            margin-top: 20px;
+            font-size: 1em;
+            color: #333;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy New Year, {{ name }}!</h1>
+    <p>{{ message }}</p>
+    <figure>
+        <img src="{{ url_for('static', filename='images/' + image) }}" alt="Favorite Moment">
+        <figcaption>{{ moment }}</figcaption>
+    </figure>
+    <div class="signature">
+        <p>Best regards,</p>
+        <p>Asa, or Fajris for some of you</p>
+    </div>
+</body>
+</html>
